@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iris Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- Custom styles for this template -->
+    <link href="../static/css/iris.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark text-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Project IRIS Classification</h5>
+    </div>
+    <div class="container p-3 my-3 bg-secondary text-white">
+    <form class="form-group" action="/" method="POST">
+      <label for="sepallength">Sepal Length :</label>
+      <input class="form-control" type="number" name="sepallength">
+      <label for="sepalwidth">Sepal Width :</label>
+      <input class="form-control" type="number" name="sepalwidth">
+      <label for="petallength">Petal Length :</label>
+      <input class="form-control" type="number" name="petallength">
+      <label for="petalwidth">Petal Width :</label>
+      <input class="form-control" type="number" name="petalwidth">
+    </br>
+      <button class="btn btn-dark" type="submit" name="submit">Submit</button>
+    </form>
+        {% if setosa %}
+          <div class="alert alert-primary">{{setosa}}</div>
+        {% elif versicolor %}
+          <div class="alert alert-primary">{{versicolor}}</div>
+        {% elif virginica %}
+          <div class="alert alert-primary">{{virginica}}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
